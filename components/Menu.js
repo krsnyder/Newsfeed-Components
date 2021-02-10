@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // This is the data we will be using, study it but don't change anything, yet.
 
 let menuItems = [
@@ -8,6 +9,24 @@ let menuItems = [
   'Music',
   'Log Out'
 ];
+
+function menuMaker(array) {
+  const menuItem = document.createElement('div')
+  const list = document.createElement('ul')
+
+  const items = array.map(menuItem => {
+    const item = document.createElement('li')
+    list.appendChild(item)
+  })
+
+  const menuButton = document.querySelector('.menu-button')
+  
+  menuButton.addEventListener('click', (e) => {
+    e.target.classList.toggle('menu--open')
+  })
+
+  menuItem.classList.add('menu')
+}
 
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
