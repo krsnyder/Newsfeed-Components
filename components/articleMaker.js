@@ -22,6 +22,13 @@ function articleMaker({ title, date, first, second, third }) {
   article.classList.add('article');
   articleDate.classList.add('date');
   expand.classList.add('expandButton');
+
+  article.title.textContent = title
+  articleDate.textContent = date
+  firstP.textContent = first
+  secondP.textContent = second
+  thirdP.textContent = third
+  expand.textContent = '+'
   
   expand.addEventListener('click', (e) => {
     e.target.classList.toggle('off')
